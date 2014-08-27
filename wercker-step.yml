@@ -1,6 +1,6 @@
 name: eb-deploy
-version: 0.0.1
-description: deploy to AWS ElasticBeanstalk
+version: 0.0.2
+description: Deploy a zipped app to AWS ElasticBeanstalk
 keywords:
   - Koding
   - ElasicBeanstalk
@@ -18,7 +18,7 @@ properties:
   env-name:
     type: string
     required: true
-  bucket:
+  s3-app-location:
     type: string
     required: true
   version-label:

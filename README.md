@@ -1,5 +1,6 @@
 # koding-eb-deploy
 
+```
 deploy:
   steps:
   - koding/koding-eb-deploy@0.0.1:
@@ -9,4 +10,4 @@ deploy:
       env-name: prod
       bucket: deployments
       version-label: 0.0.1
-
+```

@@ -23,7 +23,7 @@ if [ ! -n "$WERCKER_EB_DEPLOY_VERSION_LABEL" ]; then
   exit 1
 fi
 
-if [ ! -n "$WERCKER_EB_DEPLOY_S3_APP_LOCATION" ]; then
+if [ ! -n "$WERCKER_EB_DEPLOY_APP_LOCATION" ]; then
   error 'Please specify bucket'
   exit 1
 fi
@@ -31,6 +31,6 @@ fi
 export AMAZON_ACCESS_KEY_ID=$WERCKER_EB_DEPLOY_ACCESS_KEY
 export AMAZON_SECRET_ACCESS_KEY=$WERCKER_EB_DEPLOY_SECRET_KEY
 
-$WERCKER_STEP_ROOT/eb-api/bin/elastic-beanstalk-create-application-version -a $WERCKER_EB_DEPLOY_APP_NAME -l $WERCKER_EB_DEPLOY_VERSION_LABEL -s $WERCKER_EB_DEPLOY_S3_APP_LOCATION
+$WERCKER_STEP_ROOT/eb-api/bin/elastic-beanstalk-create-application-version -a $WERCKER_EB_DEPLOY_APP_NAME -l $WERCKER_EB_DEPLOY_VERSION_LABEL -s $WERCKER_EB_DEPLOY_APP_LOCATION
 
 $WERCKER_STEP_ROOT/eb-api/bin/elastic-beanstalk-update-environment -e $WERCKER_EB_DEPLOY_ENV_NAME -l $WERCKER_EB_DEPLOY_VERSION_LABEL -d "update environment"

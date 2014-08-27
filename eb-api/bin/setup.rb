@@ -1,7 +1,7 @@
 ###########################################################################
 # AWS Elastic Beanstalk Command Line Client
 # Copyright 2011 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the “License”). You
 # may not use this file except in compliance with the License. A copy of
 # the License is located at
@@ -35,11 +35,11 @@ if ENV['AWS_CREDENTIAL_FILE'] && File.exists?(ENV['AWS_CREDENTIAL_FILE'])
     config[:aws_secret_key] = $1 if line[/AWSSecretKey=(.*)/]
   end
 elsif ENV['AMAZON_ACCESS_KEY_ID'] && ENV['AMAZON_SECRET_ACCESS_KEY']
-  config[:aws_access_key] = ENV['AMAZON_ACCESS_KEY_ID']
-  config[:aws_secret_key] = ENV['AMAZON_SECRET_ACCESS_KEY']
+  config[:aws_access_key] = ENV['AMAZON_ACCESS_KEY_ID'].dup
+  config[:aws_secret_key] = ENV['AMAZON_SECRET_ACCESS_KEY'].dup
 end
 
-config[:aws_access_key].strip! if config[:aws_access_key] 
+config[:aws_access_key].strip! if config[:aws_access_key]
 config[:aws_secret_key].strip! if config[:aws_secret_key]
 
 abort "AWS credentials required" unless config[:aws_access_key] && config[:aws_secret_key]

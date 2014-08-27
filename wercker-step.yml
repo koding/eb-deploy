@@ -1,5 +1,5 @@
 name: koding-eb-deploy
-version: 0.0.1
+version: 0.0.2
 description: deploy to AWS ElasticBeanstalk
 keywords:
   - Koding

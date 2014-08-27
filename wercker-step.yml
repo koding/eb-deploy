@@ -1,5 +1,5 @@
 name: eb-deploy
-version: 0.0.9
+version: 0.0.1
 description: deploy to AWS ElasticBeanstalk
 keywords:
   - Koding

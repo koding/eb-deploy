@@ -1,0 +1,26 @@
+name: koding-eb-deploy
+version: 0.0.1
+description: deploy to AWS ElasticBeanstalk
+keywords:
+  - Koding
+  - ElasicBeanstalk
+  - AWS
+properties:
+  access-key:
+    type: string
+    required: true
+  secret-key:
+    type: string
+    required: true
+  app-name:
+    type: string
+    required: true
+  env-name:
+    type: string
+    required: true
+  bucket:
+    type: string
+    required: true
+  version-label:
+    type: string
+    required: true

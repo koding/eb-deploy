@@ -62,6 +62,8 @@ export AWS_DEFAULT_REGION=$WERCKER_EB_DEPLOY_REGION
 # create description for app deployment
 export EB_DESCRIPTION=$WERCKER_EB_DEPLOY_ENV_NAME,$WERCKER_GIT_BRANCH
 
+aws s3 cp --acl private "$WERCKER_EB_DEPLOY_S3_KEY" "s3://$WERCKER_EB_DEPLOY_S3_BUCKET"
+
 aws elasticbeanstalk create-application-version \
     --region $WERCKER_EB_DEPLOY_REGION \
     --application-name $WERCKER_EB_DEPLOY_APP_NAME \

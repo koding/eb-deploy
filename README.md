@@ -8,7 +8,6 @@ deploy:
       secret-key: $S3_KEY_SECRET
       app-name: <enter app name>
       env-name: <enter env name>
-      s3-app-location: <enter bucket name>/<enter zipped file name>
       version-label: <enter version label>
       region: <enter region>
       s3-bucket: <enter s3 bucket name>

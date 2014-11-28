@@ -46,6 +46,14 @@ info 'Installing the AWS CLI...';
 sudo pip install awscli;
 
 
+mkdir -p $HOME/.aws
+echo '[default]' > $HOME/.aws/config
+echo 'output = json' >> $HOME/.aws/config
+echo "region = $WERCKER_EB_DEPLOY_REGION" >> $HOME/.aws/config
+echo "aws_access_key_id = $WERCKER_EB_DEPLOY_ACCESS_KEY" >> $HOME/.aws/config
+echo "aws_secret_access_key = $WERCKER_EB_DEPLOY_SECRET_KEY" >> $HOME/.aws/config
+
+
 # set default values for AWS CLI tool
 export AMAZON_ACCESS_KEY_ID=$WERCKER_EB_DEPLOY_ACCESS_KEY
 export AMAZON_SECRET_ACCESS_KEY=$WERCKER_EB_DEPLOY_SECRET_KEY

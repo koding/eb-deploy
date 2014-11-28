@@ -18,9 +18,14 @@ properties:
   env-name:
     type: string
     required: true
-  app-location:
+  version-label:
     type: string
     required: true
-  version-label:
+  region:
+    type: string
+  s3-bucket:
+    type: string
+    required: true
+  s3-key:
     type: string
     required: true

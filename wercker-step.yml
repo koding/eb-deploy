@@ -1,5 +1,5 @@
 name: eb-deploy
-version: 0.0.29
+version: 0.29
 description: Deploy a zipped app to AWS ElasticBeanstalk
 keywords:
   - Koding

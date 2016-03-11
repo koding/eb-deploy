@@ -1,4 +1,4 @@
-box: koding/base@0.0.11
+box: koding/base@0.0.29
 
 build:
   steps:

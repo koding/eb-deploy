@@ -38,10 +38,6 @@ if [ ! -n "$WERCKER_EB_DEPLOY_REGION" ]; then
   export WERCKER_EB_DEPLOY_REGION="us-east-1"
 fi
 
-info 'Installing Python...';
-sudo apt-get update -y;
-sudo apt-get install python -y;
-
 info 'Installing the AWS CLI...';
 sudo pip install awscli;
 

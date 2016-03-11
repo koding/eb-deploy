@@ -3,7 +3,7 @@
 ```
 deploy:
   steps:
-  - koding/eb-deploy@0.0.29:
+  - koding/eb-deploy@0.31.0:
       access-key: $S3_KEY_ID
       secret-key: $S3_KEY_SECRET
       app-name: <enter app name>
